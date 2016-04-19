@@ -31,7 +31,7 @@ public class BasicMarketFeed implements MarketFeed{
         return Builder.createCandleStick(quotes);
     }
 
-    private Deque<PriceQuote> getRealTimeQuotes(){
+    private Deque<PriceQuote> getRealTimeQuotes() throws IOException{
 
         Deque<PriceQuote> quotes = new ArrayDeque<PriceQuote>();
 

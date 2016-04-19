@@ -8,13 +8,14 @@ import model.YahooQuoteGenerator;
  */
 public class Main {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         YahooQuoteGenerator quoteGen = new YahooQuoteGenerator("SPY");
-        PriceQuote pq = quoteGen.getQuote();
-
-        System.out.println(pq.toString());
-
-
+        try{
+            PriceQuote pq = quoteGen.getQuote();
+            System.out.println(pq.toString());
+        }catch(Exception e){
+            System.out.println("{Main.main}\t\t[ERROR]\t\t" + e);
+        }
     }
 }
