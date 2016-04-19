@@ -11,7 +11,15 @@
     <modules>
         <module>portfolio</module>
         <module>library</module>
+        <module>marketfeed</module>
     </modules>
+
+    <properties>
+        <library.version>1.0-SNAPSHOT</library.version>
+        <marketfeed.version>1.0-SNAPSHOT</marketfeed.version>
+        <portfolio.version>1.0-SNAPSHOT</portfolio.version>
+    </properties>
+
 
     <build>
         <plugins>

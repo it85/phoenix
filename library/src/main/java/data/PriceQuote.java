@@ -7,13 +7,14 @@ import java.sql.Timestamp;
  */
 public class PriceQuote {
 
-    private double price;
-    private double volume;
-    private  Timestamp timeStamp;
+    private final double price;
+    private final double volume;
+    private final Timestamp timeStamp;
 
     public PriceQuote(double price, double volume){
         this.price = price;
         this.volume = volume;
+        this.timeStamp = new Timestamp(0);
     }
 
     public PriceQuote(Timestamp timeStamp, double price, double volume){
