@@ -12,6 +12,7 @@
         <module>portfolio</module>
         <module>library</module>
         <module>marketfeed</module>
+        <module>engine</module>
     </modules>
 
     <properties>

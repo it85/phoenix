@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import com.typesafe.config.Config;
+import com.typesafe.config.ConfigFactory;
 import data.PriceQuote;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -104,13 +106,9 @@ public class YahooQuoteGenerator implements QuoteGenerator{
 
     private String getQueryString(){
 
-        String url1 = "https://query.yahooapis.com/v1/public/yql?q=select%20";
-        String columns = "LastTradePriceOnly,Volume";
-        String url2 = "%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22";
-        String symbol = this.symbol;
-        String url3 = "%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=";
+        Config config = ConfigFactory.load();
 
-        return url1 + columns + url2 + symbol + url3;
+        String configKey = "query.url." + this.symbol;
+        return config.getString(configKey);
     }
-
 }
