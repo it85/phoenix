@@ -26,21 +26,14 @@ public class YahooQuoteGenerator implements QuoteGenerator{
         this.symbol = symbol.toLowerCase();
     }
 
-    public PriceQuote getQuote(){
-        try {
-            String json = getQuoteAsJson();
+    public PriceQuote getQuote() throws IOException{
+        String json = getQuoteAsJson();
 
-            String[] arr = new String[2];
-            arr[0] = getLastTradePrice(json);
-            arr[1] = getVolume(json);
+        String[] arr = new String[2];
+        arr[0] = getLastTradePrice(json);
+        arr[1] = getVolume(json);
 
-            return Builder.createRealTimeQuote(arr);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return null;
+        return Builder.createRealTimeQuote(arr);
     }
 
     private String getLastTradePrice(String json){
@@ -56,7 +49,7 @@ public class YahooQuoteGenerator implements QuoteGenerator{
             }
         }
 
-        return null;
+        return "";
     }
 
     private String getVolume(String json){
@@ -72,7 +65,7 @@ public class YahooQuoteGenerator implements QuoteGenerator{
             }
         }
 
-        return null;
+        return "";
     }
 
     private String getQuoteAsJson() throws IOException{
