@@ -141,4 +141,15 @@ public class Portfolio {
     public Map<String, ArrayList<Order>> getOrderHistory() {
         return orderHistory;
     }
+
+    @Override
+    public String toString() {
+        return "Portfolio{" +
+                "totalBalance=" + totalBalance +
+                ", cashBalance=" + cashBalance +
+                ", securitiesBalance=" + securitiesBalance +
+                ", positions=" + positions +
+                ", orderHistory=" + orderHistory +
+                '}';
+    }
 }

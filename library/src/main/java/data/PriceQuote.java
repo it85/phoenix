@@ -34,4 +34,13 @@ public class PriceQuote {
     public Timestamp getTimeStamp() {
         return timeStamp;
     }
+
+    @Override
+    public String toString() {
+        return "PriceQuote{" +
+                "price=" + price +
+                ", volume=" + volume +
+                ", timeStamp=" + timeStamp +
+                '}';
+    }
 }

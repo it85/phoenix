@@ -45,4 +45,15 @@ public class CandleStick {
         return volume;
     }
 
+    @Override
+    public String toString() {
+        return "CandleStick{" +
+                "timeStamp=" + timeStamp +
+                ", open=" + open +
+                ", high=" + high +
+                ", low=" + low +
+                ", close=" + close +
+                ", volume=" + volume +
+                '}';
+    }
 }
