@@ -14,12 +14,14 @@
         <module>marketfeed</module>
         <module>engine</module>
         <module>test</module>
+        <module>algorithm</module>
     </modules>
 
     <properties>
         <library.version>1.0-SNAPSHOT</library.version>
         <marketfeed.version>1.0-SNAPSHOT</marketfeed.version>
         <portfolio.version>1.0-SNAPSHOT</portfolio.version>
+        <algorithm.version>1.0-SNAPSHOT</algorithm.version>
         <java.version>1.8</java.version>
     </properties>
 
