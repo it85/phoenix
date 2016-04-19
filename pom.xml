@@ -18,6 +18,7 @@
         <library.version>1.0-SNAPSHOT</library.version>
         <marketfeed.version>1.0-SNAPSHOT</marketfeed.version>
         <portfolio.version>1.0-SNAPSHOT</portfolio.version>
+        <java.version>1.8</java.version>
     </properties>
 
 
@@ -28,8 +29,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>2.3.2</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
                 </configuration>
             </plugin>
         </plugins>
