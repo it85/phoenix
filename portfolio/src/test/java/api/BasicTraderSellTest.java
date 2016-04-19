@@ -12,7 +12,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import exception.InvalidSellOrderException;
-import model.BasicTrader;
+import data.BasicTrader;
 
 public class BasicTraderSellTest {
 

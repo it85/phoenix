@@ -14,8 +14,8 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import exception.InvalidBuyOrderException;
-import model.Portfolio;
-import model.BasicTrader;
+import data.Portfolio;
+import data.BasicTrader;
 
 public class BasicTraderBuyTest {
 

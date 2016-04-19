@@ -1,4 +1,4 @@
-package model;
+package data;
 
 import java.math.BigDecimal;
 import java.util.Date;
