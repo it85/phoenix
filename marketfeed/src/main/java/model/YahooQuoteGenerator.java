@@ -23,7 +23,7 @@ public class YahooQuoteGenerator implements QuoteGenerator{
     String symbol;
 
     public YahooQuoteGenerator(String symbol){
-        this.symbol = symbol;
+        this.symbol = symbol.toLowerCase();
     }
 
     public PriceQuote getQuote(){
@@ -106,7 +106,7 @@ public class YahooQuoteGenerator implements QuoteGenerator{
 
     private String getQueryString(){
 
-        Config config = ConfigFactory.load();
+        Config config = ConfigFactory.load("queryurls.conf");
 
         String configKey = "query.url." + this.symbol;
         return config.getString(configKey);
