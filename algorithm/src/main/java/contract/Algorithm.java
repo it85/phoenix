@@ -1,5 +1,6 @@
 package contract;
 
+import data.CandleStick;
 import type.Recommendation;
 
 /**
@@ -7,6 +8,6 @@ import type.Recommendation;
  */
 public interface Algorithm {
 
-    public Recommendation run(double price);
+    public Recommendation run(CandleStick candleStick);
 
 }

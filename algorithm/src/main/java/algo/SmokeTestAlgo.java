@@ -1,6 +1,7 @@
 package algo;
 
 import contract.Algorithm;
+import data.CandleStick;
 import type.Recommendation;
 
 /**
@@ -8,7 +9,8 @@ import type.Recommendation;
  */
 public class SmokeTestAlgo implements Algorithm {
 
-    public Recommendation run(double price){
-        return price > 100 ? Recommendation.BUY : Recommendation.SELL;
+    public Recommendation run(CandleStick candleStick){
+        return candleStick.getOpen() > 100 ? Recommendation.BUY : Recommendation.SELL;
+
     }
 }

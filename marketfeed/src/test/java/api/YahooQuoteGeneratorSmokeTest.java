@@ -32,6 +32,4 @@ public class YahooQuoteGeneratorSmokeTest {
         assertNotEquals("", pq.toString());
         assertNotEquals(0, pq.getPrice());
     }
-
-
 }

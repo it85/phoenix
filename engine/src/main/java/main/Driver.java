@@ -10,6 +10,7 @@ public class Driver {
 
         Launcher launcher = new Launcher();
         launcher.configure();
+        launcher.initialize();
         launcher.run();
 
     }
