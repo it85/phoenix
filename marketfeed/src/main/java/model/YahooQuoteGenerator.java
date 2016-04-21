@@ -20,6 +20,7 @@ import utility.Builder;
  */
 public class YahooQuoteGenerator implements QuoteGenerator{
 
+    private static Config config = ConfigFactory.load("marketfeed.conf");
     String symbol;
 
     public YahooQuoteGenerator(String symbol){
@@ -98,9 +99,6 @@ public class YahooQuoteGenerator implements QuoteGenerator{
     }
 
     private String getQueryString(){
-
-        Config config = ConfigFactory.load("queryurls.conf");
-
         String configKey = "query.url." + this.symbol;
         return config.getString(configKey);
     }

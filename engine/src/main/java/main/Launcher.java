@@ -18,7 +18,7 @@ import utility.Conversion;
  */
 public class Launcher {
 
-    private static Config config = ConfigFactory.load("initialization.conf");
+    private static Config config = ConfigFactory.load("phoenix.conf");
 
     private Trader trader;
     private MarketFeed marketFeed;
