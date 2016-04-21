@@ -6,6 +6,7 @@ import contract.MarketFeed;
 import contract.Trader;
 import data.BasicTrader;
 import model.BasicMarketFeed;
+import type.CandleStickPeriod;
 
 /**
  * Maintains and manages the actual state of the Phoenix analytics platform. PhoenixStateControl initializes the various
@@ -21,7 +22,7 @@ public class PhoenixStateControl {
 
     public PhoenixStateControl(){
         this.trader = new BasicTrader(startingBalance);
-        this.marketFeed = new BasicMarketFeed("spy", 10);
+        this.marketFeed = new BasicMarketFeed("spy", CandleStickPeriod.ONE_MIN);
         this.algorithm = new SmokeTestAlgo();
     }
 

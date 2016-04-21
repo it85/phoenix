@@ -1,6 +1,11 @@
 package main;
 
+import com.typesafe.config.Config;
+import contract.Algorithm;
+import contract.MarketFeed;
+import contract.Trader;
 import control.PhoenixStateControl;
+import data.BasicTrader;
 
 /**
  * Prepares the Phoenix analytics platform for execution by setting up configuration and initializing the various modules
@@ -8,13 +13,22 @@ import control.PhoenixStateControl;
  */
 public class Launcher {
 
-    private PhoenixStateControl phoenixStateControl;
+    private static Config config;
+
+    private Trader trader;
+    private MarketFeed marketFeed;
+    private Algorithm algorithm;
 
     public void configure(){
-        this.phoenixStateControl = new PhoenixStateControl();
+
     }
 
     public void run(){
-        phoenixStateControl.run();
+//        phoenixStateControl.run();
+    }
+
+    private Trader initTrader(){
+        double startingBalance = Double.parseDouble(config.getString("application.trader.startingBalance"));
+        return new BasicTrader(startingBalance);
     }
 }
